@@ -1,0 +1,25 @@
+{
+    "name": "smile/magento2-smilelab-phpmd",
+    "type": "library",
+    "license": "OSL-3.0",
+    "authors": [
+        {
+            "name": "Aurélien FOUCRET",
+            "email": "aurelien.foucret@smile.fr"
+        },
+        {
+            "name": "Romain Ruaud",
+            "email": "romain.ruaud@smile.fr"
+        }
+    ],
+    "description": "PHPMD Coding standards for Smile Lab Magento2 community projects.",
+    "homepage": "https://github.com/Smile-SA/magento2-smilelab-phpmd",
+    "keywords": [
+        "php",
+        "phpmd",
+        "coding standards"
+    ],
+    "require-dev": {
+        "phpmd/phpmd": "*"
+    }
+}
