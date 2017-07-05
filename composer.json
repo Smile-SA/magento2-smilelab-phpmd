@@ -19,7 +19,7 @@
         "phpmd",
         "coding standards"
     ],
-    "require-dev": {
-        "phpmd/phpmd": "*"
+    "require": {
+        "phpmd/phpmd": "~2.0"
     }
 }
