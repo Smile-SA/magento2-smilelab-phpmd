@@ -7,6 +7,7 @@
 
     <rule ref="rulesets/cleancode.xml" >
         <exclude name="MissingImport" />
+        <exclude name="IfStatementAssignment" />
     </rule>
     <rule ref="rulesets/codesize.xml" />
     <rule ref="rulesets/design.xml" />
