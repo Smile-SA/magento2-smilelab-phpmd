@@ -19,7 +19,30 @@
         "phpmd",
         "coding standards"
     ],
+    "autoload": {
+        "psr-4": {
+            "Smile\\CodeMessDetector\\": "src/"
+        }
+    },
     "require": {
-        "phpmd/phpmd": "~2.0"
+        "phpmd/phpmd": "^2.0",
+        "magento/framework": "*",
+        "magento/module-checkout": "*"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^1.8",
+        "squizlabs/php_codesniffer": "^3.7"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://repo.magento.com/"
+        }
+    ],
+    "config": {
+        "allow-plugins": {
+            "magento/composer-dependency-version-audit-plugin": true
+        },
+        "sort-packages": true
     }
 }
