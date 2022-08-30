@@ -25,6 +25,7 @@
         }
     },
     "require": {
+        "php": "^7.3 || ^8.0",
         "phpmd/phpmd": "^2.0",
         "magento/framework": "*",
         "magento/module-checkout": "*"
