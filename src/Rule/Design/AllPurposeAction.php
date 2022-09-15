@@ -14,7 +14,7 @@ use Throwable;
 /**
  * Actions must process a defined list of HTTP methods.
  *
- * @see https://github.com/magento/magento2/blob/2.4.4/dev/tests/static/framework/Magento/CodeMessDetector/Rule/Design/AllPurposeAction.php
+ * @see https://github.com/magento/magento2/blob/2.4.5/dev/tests/static/framework/Magento/CodeMessDetector/Rule/Design/AllPurposeAction.php
  */
 class AllPurposeAction extends AbstractRule implements ClassAware
 {
@@ -34,7 +34,7 @@ class AllPurposeAction extends AbstractRule implements ClassAware
             }
             $impl = class_implements($node->getFullQualifiedName(), true);
         } catch (Throwable $exception) {
-            //Couldn't load a class.
+            // Couldn't load a class
             return;
         }
 
