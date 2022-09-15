@@ -1,31 +1,16 @@
 {
     "name": "smile/magento2-smilelab-phpmd",
+    "description": "PHPMD ruleset for Magento projects.",
     "type": "library",
     "license": "OSL-3.0",
     "authors": [
         {
-            "name": "Aurélien FOUCRET",
-            "email": "aurelien.foucret@smile.fr"
-        },
-        {
-            "name": "Romain Ruaud",
-            "email": "romain.ruaud@smile.fr"
+            "name": "Smile Community of Practice",
+            "homepage": "https://www.smile.eu"
         }
     ],
-    "description": "PHPMD Coding standards for Smile Lab Magento2 community projects.",
-    "homepage": "https://github.com/Smile-SA/magento2-smilelab-phpmd",
-    "keywords": [
-        "php",
-        "phpmd",
-        "coding standards"
-    ],
-    "autoload": {
-        "psr-4": {
-            "Smile\\CodeMessDetector\\": "src/"
-        }
-    },
     "require": {
-        "php": "^7.3 || ^8.0",
+        "php": "^7.4 || ^8.0",
         "phpmd/phpmd": "^2.0",
         "magento/framework": "*",
         "magento/module-checkout": "*"
@@ -34,16 +19,21 @@
         "phpstan/phpstan": "^1.8",
         "squizlabs/php_codesniffer": "^3.7"
     },
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://repo.magento.com/"
-        }
-    ],
     "config": {
         "allow-plugins": {
             "magento/composer-dependency-version-audit-plugin": true
         },
         "sort-packages": true
-    }
+    },
+    "autoload": {
+        "psr-4": {
+            "Smile\\CodeMessDetector\\": "src/"
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://repo.magento.com/"
+        }
+    ]
 }
