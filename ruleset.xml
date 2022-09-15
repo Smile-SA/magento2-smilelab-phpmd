@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
-<ruleset name="Smile Lab PHPMD applied ruleset"
+<ruleset name="Smile Lab PHPMD ruleset"
          xmlns="http://pmd.sf.net/ruleset/1.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0 http://pmd.sf.net/ruleset_xml_schema.xsd"
          xsi:noNamespaceSchemaLocation="http://pmd.sf.net/ruleset_xml_schema.xsd">
 
-    <description>Coding standard for Magento projects.</description>
+    <description>PHPMD ruleset for Magento projects.</description>
 
     <!-- Code Size Rules -->
     <rule ref="rulesets/codesize.xml/CyclomaticComplexity"/>
@@ -40,7 +40,7 @@
     <rule ref="rulesets/naming.xml/BooleanGetMethodName"/>
 
     <!-- Magento custom rules  -->
-    <!-- @see https://github.com/magento/magento2/blob/2.4-develop/dev/tests/static/framework/Magento/CodeMessDetector/resources/rulesets/design.xml   -->
+    <!-- @see https://github.com/magento/magento2/blob/2.4.5/dev/tests/static/framework/Magento/CodeMessDetector/resources/rulesets/design.xml -->
     <rule name="AllPurposeAction"
           class="Smile\CodeMessDetector\Rule\Design\AllPurposeAction"
           message= "The class {0} does not restrict processed HTTP methods by implementing a Http*Method name*ActionInterface">
