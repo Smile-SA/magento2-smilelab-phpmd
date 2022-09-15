@@ -10,7 +10,7 @@ Custom rules are copied from https://github.com/magento/magento2/tree/2.4.5/dev/
 
 To use this ruleset, require it in composer:
 
-```
+```shell
 composer require --dev smile/magento2-smilelab-phpmd
 ```
 
@@ -18,6 +18,6 @@ composer require --dev smile/magento2-smilelab-phpmd
 
 You can run phpmd with this command:
 
-```bash
+```shell
 php vendor/bin/phpmd [src folder] text vendor/smile/magento2-smilelab-phpmd/ruleset.xml
 ```
