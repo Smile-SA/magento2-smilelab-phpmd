@@ -4,7 +4,7 @@
 
 This ruleset is meant to be used on Magento projects and modules.
 
-Custom rules are copied from https://github.com/magento/magento2/tree/2.4.4/dev/tests/static/framework/Magento/CodeMessDetector.
+Custom rules are copied from https://github.com/magento/magento2/tree/2.4.5/dev/tests/static/framework/Magento/CodeMessDetector.
 
 ## Installation
 
