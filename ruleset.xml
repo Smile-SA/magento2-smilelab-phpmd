@@ -42,7 +42,7 @@
     <!-- Magento custom rules  -->
     <!-- @see https://github.com/magento/magento2/blob/2.4.5/dev/tests/static/framework/Magento/CodeMessDetector/resources/rulesets/design.xml -->
     <rule name="AllPurposeAction"
-          class="Smile\CodeMessDetector\Rule\Design\AllPurposeAction"
+          class="SmileLab\CodeMessDetector\Rule\Design\AllPurposeAction"
           message= "The class {0} does not restrict processed HTTP methods by implementing a Http*Method name*ActionInterface">
         <description>
             <![CDATA[
@@ -67,7 +67,7 @@ class PostOrder implements ActionInterface
         </example>
     </rule>
     <rule name="CookieAndSessionMisuse"
-          class="Smile\CodeMessDetector\Rule\Design\CookieAndSessionMisuse"
+          class="SmileLab\CodeMessDetector\Rule\Design\CookieAndSessionMisuse"
           message= "The class {0} uses sessions or cookies while not being a part of HTML Presentation layer">
         <description>
             <![CDATA[
