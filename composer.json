@@ -27,7 +27,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Smile\\CodeMessDetector\\": "src/"
+            "SmileLab\\CodeMessDetector\\": "src/"
         }
     },
     "repositories": [

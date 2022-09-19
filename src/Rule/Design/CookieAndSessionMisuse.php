@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Smile\CodeMessDetector\Rule\Design;
+namespace SmileLab\CodeMessDetector\Rule\Design;
 
 use Magento\Checkout\Block\Checkout\LayoutProcessorInterface;
 use Magento\Framework\App\ActionInterface;
