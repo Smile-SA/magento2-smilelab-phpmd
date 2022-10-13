@@ -19,16 +19,16 @@
         "phpstan/phpstan": "^1.8",
         "squizlabs/php_codesniffer": "^3.7"
     },
+    "autoload": {
+        "psr-4": {
+            "SmileLab\\CodeMessDetector\\": "src/"
+        }
+    },
     "config": {
         "allow-plugins": {
             "magento/composer-dependency-version-audit-plugin": true
         },
         "sort-packages": true
-    },
-    "autoload": {
-        "psr-4": {
-            "SmileLab\\CodeMessDetector\\": "src/"
-        }
     },
     "repositories": [
         {
