@@ -7,7 +7,6 @@ namespace SmileLab\CodeMessDetector\Rule\Design;
 use Magento\Checkout\Block\Checkout\LayoutProcessorInterface;
 use Magento\Framework\App\ActionInterface;
 use Magento\Framework\Event\ObserverInterface;
-use Magento\Framework\GetParameterClassTrait;
 use Magento\Framework\Session\SessionManagerInterface;
 use Magento\Framework\Stdlib\Cookie\CookieReaderInterface;
 use Magento\Framework\View\Element\Block\ArgumentInterface;
@@ -20,6 +19,8 @@ use PHPMD\Node\ClassNode;
 use PHPMD\Rule\ClassAware;
 use ReflectionClass;
 use ReflectionException;
+use ReflectionNamedType;
+use ReflectionParameter;
 use Throwable;
 
 /**
@@ -30,8 +31,6 @@ use Throwable;
  */
 class CookieAndSessionMisuse extends AbstractRule implements ClassAware
 {
-    use GetParameterClassTrait;
-
     /**
      * Is given class a controller?
      *
@@ -238,5 +237,26 @@ class CookieAndSessionMisuse extends AbstractRule implements ClassAware
                 $this->addViolation($node, [$node->getFullQualifiedName()]);
             }
         }
+    }
+
+    /**
+     * Get class by reflection parameter
+     *
+     * @param ReflectionParameter $reflectionParameter
+     *
+     * @return ReflectionClass|null
+     * @throws ReflectionException
+     */
+    private function getParameterClass(ReflectionParameter $reflectionParameter): ?ReflectionClass
+    {
+        $parameterType = $reflectionParameter->getType();
+        // In PHP8, $parameterType could be an instance of ReflectionUnionType, which doesn't have isBuiltin method.
+        if (!$parameterType instanceof ReflectionNamedType) {
+            return null;
+        }
+
+        return !$parameterType->isBuiltin()
+            ? new ReflectionClass($parameterType->getName())
+            : null;
     }
 }
