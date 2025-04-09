@@ -22,7 +22,7 @@ class AllPurposeAction extends AbstractRule implements ClassAware
      * @inheritdoc
      * @param ClassNode $node
      */
-    public function apply(AbstractNode $node)
+    public function apply(AbstractNode $node): void
     {
         // Skip validation for Abstract Controllers
         if ($node->isAbstract()) {

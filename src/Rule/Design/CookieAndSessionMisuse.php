@@ -213,7 +213,7 @@ class CookieAndSessionMisuse extends AbstractRule implements ClassAware
      *
      * @param ClassNode $node
      */
-    public function apply(AbstractNode $node)
+    public function apply(AbstractNode $node): void
     {
         try {
             $class = new ReflectionClass($node->getFullQualifiedName());
