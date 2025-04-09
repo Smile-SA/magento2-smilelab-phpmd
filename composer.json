@@ -11,7 +11,7 @@
     ],
     "require": {
         "php": "^7.4 || ^8.0",
-        "phpmd/phpmd": "^2.0",
+        "phpmd/phpmd": "^2.0 || 3.x-dev",
         "magento/framework": "*",
         "magento/module-checkout": "*"
     },
@@ -27,6 +27,9 @@
     "config": {
         "allow-plugins": {
             "magento/composer-dependency-version-audit-plugin": true
+        },
+        "audit": {
+            "abandoned": "report"
         },
         "sort-packages": true
     },
