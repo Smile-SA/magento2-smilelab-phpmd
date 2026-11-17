@@ -5,4 +5,7 @@ parameters:
     checkMissingIterableValueType: false
     checkGenericClassInNonGenericObjectType: false
     ignoreErrors:
-        - '#Call to an undefined method PHPMD\\Node\\ClassNode::#'
+        -
+            # Only needed with phpmd 2.x (the methods exist in phpmd 3)
+            message: '#Call to an undefined method PHPMD\\Node\\ClassNode::#'
+            reportUnmatched: false
